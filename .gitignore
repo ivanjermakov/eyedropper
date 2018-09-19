@@ -7,3 +7,4 @@ gradlew.bat
 settings.gradle
 build
 src/main/resources
+run.bat
