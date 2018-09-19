@@ -14,3 +14,10 @@ repositories {
 dependencies {
     compile group: 'com.1stleg', name: 'jnativehook', version: '2.1.0'
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.gmail.ivanjermakov1.eyedropper.Main'
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
